@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Edit</title>
+</head>
+<body>
+<h1>Create New Details</h1>
+<form action="#" th:action="@{/save}" th:object="${transaction}" method="post" >
+<table>
+<tr><td>
+<label>Date</label></td>
+<td>
+<input type="hidden" th:field="*{id}" >
+<input type="text" th:field="*{date}" placeholder="Date">
+</td>
+</tr>
+<tr><td>
+<label>Transaction Type</label></td>
+<td>
+<input type="text" th:field="*{pay_type}" placeholder="Transaction Amount">
+</td>
+</tr>
+<tr>
+<td>
+<label>Details</label></td>
+<td>
+<input type="text" th:field="*{pay_details}" placeholder="Transaction Details">
+</td>
+<td>
+<label>Paid Out</label></td>
+<td>
+<input type="text" th:field="*{paid_out}" placeholder="Paid out">
+</td>
+<td>
+<label>Paid In</label></td>
+<td>
+<input type="text" th:field="*{paid_in}" placeholder="Paid In">
+</td>
+<td>
+<label>Balance</label></td>
+<td>
+<input type="text" th:field="*{balance}" placeholder="Balance">
+</td>
+</tr>
+<tr>
+<td>
+<button type="submit" th:href="@{/save}">Save</button></td></tr>
+</table>
+</form>
+
+</body>
+</html>
